@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "UpdatePackage",
+  "title": "Update package deps",
+  "type": "object",
+  "description": "Update package deps",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-prompt": "What is the name of the project?"
+    }
+  },
+  "required": ["name"]
+}

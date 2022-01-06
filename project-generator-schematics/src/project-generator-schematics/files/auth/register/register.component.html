@@ -1,0 +1,147 @@
+<mat-card fxLayout="column">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <!-- <div class="alert alert-success" *ngIf="success" jhiTranslate="register.messages.success">
+                <strong>Registration saved!</strong> Please check your email for confirmation.
+            </div>
+
+            <div class="alert alert-danger" *ngIf="error" jhiTranslate="register.messages.error.fail">
+                <strong>Registration failed!</strong> Please try again later.
+            </div>
+
+            <div class="alert alert-danger" *ngIf="errorUserExists" jhiTranslate="register.messages.error.userexists">
+                <strong>Login name already registered!</strong> Please choose another one.
+            </div>
+
+            <div class="alert alert-danger" *ngIf="errorEmailExists" jhiTranslate="register.messages.error.emailexists">
+                <strong>Email is already in use!</strong> Please choose another one.
+            </div>
+
+            <div class="alert alert-danger" *ngIf="doNotMatch" jhiTranslate="global.messages.error.dontmatch">
+                The password and its confirmation do not match!
+            </div> -->
+        </div>
+    </div>
+
+    <mat-card-content>
+        <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="8px" name="form" role="form"
+            (ngSubmit)="register()" [formGroup]="registerFormGroup" *ngIf="!success">
+            <mat-icon>app_registration</mat-icon>
+            <mat-form-field fxFill>
+                <input matInput type="text" id="login" name="login"
+                    placeholder="{{ 'global.form.username.placeholder' }}" formControlName="login"
+                    data-cy="username" #login />
+                <!-- <mat-error *ngIf="
+              registerFormGroup.get('login')!.invalid && (registerFormGroup.get('login')!.dirty || registerFormGroup.get('login')!.touched)
+            ">
+                    <div class="form-text text-danger" *ngIf="registerFormGroup.get('login')?.errors?.required"
+                        jhiTranslate="register.messages.validate.login.required">
+                        Your username is required.
+                    </div>
+
+                    <div class="form-text text-danger" *ngIf="registerFormGroup.get('login')?.errors?.minlength"
+                        jhiTranslate="register.messages.validate.login.minlength">
+                        Your username is required to be at least 1 character.
+                    </div>
+
+                    <div class="form-text text-danger" *ngIf="registerFormGroup.get('login')?.errors?.maxlength"
+                        jhiTranslate="register.messages.validate.login.maxlength">
+                        Your username cannot be longer than 50 characters.
+                    </div>
+
+                    <div class="form-text text-danger" *ngIf="registerFormGroup.get('login')?.errors?.pattern"
+                        jhiTranslate="register.messages.validate.login.pattern">
+                        Your username can only contain letters and digits.
+                    </div> -->
+                <!-- </mat-error> -->
+            </mat-form-field>
+
+            <mat-form-field fxFill>
+                <input matInput type="email" id="email" name="email"
+                    placeholder="{{ 'global.form.email.placeholder' }}" formControlName="email"
+                    data-cy="email" />
+
+                <!-- <mat-error *ngIf="
+              registerFormGroup.get('email')!.invalid && (registerFormGroup.get('email')!.dirty || registerFormGroup.get('email')!.touched)
+            ">
+                    <div class="form-text text-danger" *ngIf="registerFormGroup.get('email')?.errors?.required"
+                        jhiTranslate="global.messages.validate.email.required">
+                        Your email is required.
+                    </div>
+
+                    <div class="form-text text-danger" *ngIf="registerFormGroup.get('email')?.errors?.invalid"
+                        jhiTranslate="global.messages.validate.email.invalid">
+                        Your email is invalid.
+                    </div>
+
+                    <div class="form-text text-danger" *ngIf="registerFormGroup.get('email')?.errors?.minlength"
+                        jhiTranslate="global.messages.validate.email.minlength">
+                        Your email is required to be at least 5 characters.
+                    </div>
+
+                    <div class="form-text text-danger" *ngIf="registerFormGroup.get('email')?.errors?.maxlength"
+                        jhiTranslate="global.messages.validate.email.maxlength">
+                        Your email cannot be longer than 100 characters.
+                    </div>
+                </mat-error> -->
+            </mat-form-field>
+
+            <mat-form-field fxFill>
+                <input matInput type="password" id="password" name="password"
+                    placeholder="{{ 'global.form.newpassword.placeholder'}}" formControlName="password"
+                    data-cy="firstPassword" />
+<!-- 
+                <mat-error *ngIf="
+              registerFormGroup.get('password')!.invalid &&
+              (registerFormGroup.get('password')!.dirty || registerFormGroup.get('password')!.touched)
+            ">
+                    <div class="form-text text-danger" *ngIf="registerFormGroup.get('password')?.errors?.required"
+                        jhiTranslate="global.messages.validate.newpassword.required">
+                        Your password is required.
+                    </div>
+
+                    <div class="form-text text-danger" *ngIf="registerFormGroup.get('password')?.errors?.minlength"
+                        jhiTranslate="global.messages.validate.newpassword.minlength">
+                        Your password is required to be at least 4 characters.
+                    </div>
+
+                    <div class="form-text text-danger" *ngIf="registerFormGroup.get('password')?.errors?.maxlength"
+                        jhiTranslate="global.messages.validate.newpassword.maxlength">
+                        Your password cannot be longer than 50 characters.
+                    </div>
+                </mat-error> -->
+            </mat-form-field>
+
+            <mat-form-field fxFill>
+                <input matInput type="password" id="confirmPassword" name="confirmPassword"
+                    placeholder="{{ 'global.form.confirmpassword.placeholder'}}"
+                    formControlName="confirmPassword" data-cy="secondPassword" />
+
+                <!-- <mat-error *ngIf="
+              registerFormGroup.get('confirmPassword')!.invalid &&
+              (registerFormGroup.get('confirmPassword')!.dirty || registerFormGroup.get('confirmPassword')!.touched)
+            ">
+                    <div class="form-text text-danger"
+                        *ngIf="registerFormGroup.get('confirmPassword')?.errors?.required"
+                        jhiTranslate="global.messages.validate.confirmpassword.required">
+                        Your confirmation password is required.
+                    </div>
+
+                    <div class="form-text text-danger"
+                        *ngIf="registerFormGroup.get('confirmPassword')?.errors?.minlength"
+                        jhiTranslate="global.messages.validate.confirmpassword.minlength">
+                        Your confirmation password is required to be at least 4 characters.
+                    </div>
+
+                    <div class="form-text text-danger"
+                        *ngIf="registerFormGroup.get('confirmPassword')?.errors?.maxlength"
+                        jhiTranslate="global.messages.validate.confirmpassword.maxlength">
+                        Your confirmation password cannot be longer than 50 characters.
+                    </div>
+                </mat-error> -->
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" type="submit">Register</button>
+        </form>
+    </mat-card-content>
+</mat-card>

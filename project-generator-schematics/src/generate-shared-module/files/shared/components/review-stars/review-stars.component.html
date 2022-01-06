@@ -1,0 +1,26 @@
+<div fxLayout="row">
+    <ul class=" rating-list" 
+    *ngFor="let star of stars" >
+      <li (click)="countStar(star)"
+          [ngClass]="{'selected': (star <= selectedValue)}">
+        <mat-icon> star </mat-icon>
+      </li> 
+</ul>
+</div>
+
+
+
+
+
+
+<!-- <div class="row">
+    <div class="col-sm-12">
+        <ul class="list-inline rating-list" 
+            *ngFor="let star of stars" style="display: inline-block" >
+              <li (click)="countStar(star)"
+                  [ngClass]="{'selected': (star <= selectedValue)}">
+                <mat-icon> star </mat-icon>
+              </li> 
+        </ul>
+    </div>
+  </div> -->

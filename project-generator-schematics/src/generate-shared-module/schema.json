@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "NgAddSharedModule",
+  "title": "Add Shared Module",
+  "type": "object",
+  "description": "Generate shared module",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-prompt": "Where do you want to add Shared Module?"
+    }
+  },
+  "required": ["name"]
+}

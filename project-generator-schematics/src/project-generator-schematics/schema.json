@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "NgNewSchema",
+  "title": "ProjectGenerator",
+  "type": "object",
+  "description": "Generate an angular app",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-prompt": "What is the name of the project?"
+    }
+  },
+  "required": ["name"]
+}

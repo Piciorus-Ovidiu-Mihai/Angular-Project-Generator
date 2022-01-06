@@ -1,0 +1,25 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "project-generator-schematics": {
+      "description": "Project generator schematics",
+      "factory": "./project-generator-schematics/index#projectGeneratorSchematics",
+      "schema": "./project-generator-schematics/schema.json"
+    },
+    "generate-shared-module": {
+      "description": "A blank schematic.",
+      "factory": "./generate-shared-module/index#generateSharedModule",
+      "schema": "./generate-shared-module/schema.json"
+    },
+    "override-app-root": {
+      "description": "A blank schematic.",
+      "factory": "./override-app-root/index#overrideAppRoot",
+      "schema": "./override-app-root/schema.json"
+    },
+    "update-package": {
+      "description": "A blank schematic.",
+      "factory": "./update-package/index#updatePackage",
+      "schema": "./update-package/schema.json"
+    }
+  }
+}

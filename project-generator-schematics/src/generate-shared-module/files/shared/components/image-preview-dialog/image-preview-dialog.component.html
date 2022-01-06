@@ -1,0 +1,40 @@
+<form class="dialog mat-typography" (ngSubmit)="saveImage()">
+  <p mat-dialog-title class="dialog--title" *ngIf="!title">
+    <span *ngIf="image && !viewOnly">{{ 'edit image' }}</span>
+    <span *ngIf="!image && !viewOnly">{{ 'add image' }}</span>
+    <span *ngIf="viewOnly">{{ 'view image' }}</span>
+  </p>
+  <p mat-dialog-title class="dialog--title" *ngIf="title">
+    <span>{{title}}</span>
+  </p>
+
+  <div mat-dialog-content class="dialog--content" fxLayout="column" fxLayoutGap="16px">
+
+    <div class="img-container">
+      <img *ngIf="image" fxFlex="nogrow" class="img" [src]="{ image: image, imageType: imageType } | sanitizeImage" />
+      <img *ngIf="!image" fxFlex="nogrow" class="img" src="assets/no-image-placeholder.png" />
+    </div>
+
+
+    <div *ngIf="!viewOnly" fxLayout="row" fxLayoutGap="8px" fxLayoutAlign="center center">
+      <button mat-flat-button color="accent" type="button" (click)="imgFileInput.click()">Adauga</button>
+      <button mat-flat-button color="warn" type="button" (click)="removeImage()">Sterge</button>
+    </div>
+    <input hidden #imgFileInput name="imageUrl" type="file" accept="image/*" (change)="handleInputChange($event)" />
+
+  </div>
+
+  <div mat-dialog-actions class="dialog--actions">
+    <div class="dialog--actions--left" fxFlex>
+    </div>
+    <div class="dialog--actions--right" fxFlex fxLayout="row" fxLayoutAlign="end start" fxLayoutGap="8px">
+      <button mat-flat-button class="dialog--actions--btn" color="primary" type="button" (click)="onCancel()">
+        <span *ngIf="!viewOnly">cancel</span>
+        <span *ngIf="viewOnly">close</span>
+      </button>
+      <button *ngIf="!viewOnly" mat-flat-button class="dialog--actions--btn" type="submit" color="primary">
+        <span>save</span>
+      </button>
+    </div>
+  </div>
+</form>

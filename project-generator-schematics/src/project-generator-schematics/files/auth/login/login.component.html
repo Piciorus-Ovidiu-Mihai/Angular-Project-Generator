@@ -1,0 +1,15 @@
+<mat-card fxLayout="column">
+    <mat-card-content>
+        <form fxLayout="column" fxLayoutAlign="center center" [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()">
+            <mat-icon>login</mat-icon>
+            <mat-form-field fxFill>
+                <input matInput placeholder="Username" formControlName="username" required />
+            </mat-form-field>
+            <mat-form-field fxFill>
+                <input matInput type="password" placeholder="Password" formControlName="password" required />
+                <mat-error> Please provide a valid password </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary">Login</button>
+        </form>
+    </mat-card-content>
+</mat-card>
