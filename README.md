@@ -7,7 +7,7 @@ inside.
 ## 💎 What it does ? 
 Basically, this application is divided in four projects. Each project generate some code
 * 🚨 Project generator schematics
-* 
+
 This generate an angular application with some base packages.
 
  ![alt text](https://github.com/Piciorus-Ovidiu-Mihai/Photos/blob/master/architecture-as-1.png) ![alt text](https://github.com/Piciorus-Ovidiu-Mihai/Photos/blob/master/architecture-as-2.png)
@@ -26,7 +26,6 @@ Using this project, it override the root of one application, adding lazy-loading
 It generates a shared module with some common pipes and components.
 
 ![alt text](https://github.com/Piciorus-Ovidiu-Mihai/Photos/blob/master/architecture-as-3.png)<br/><br/><br/>
-
 After running all four projects, an entire template of one client application will be generated.
  ![alt text](https://github.com/Piciorus-Ovidiu-Mihai/Photos/blob/master/angular-schematics-preview.png)<br/><br/><br/>
 
