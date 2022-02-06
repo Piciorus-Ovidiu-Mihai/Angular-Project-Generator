@@ -5,7 +5,16 @@ For a quick start you can generate an angular project with arhitecture and some 
 inside.
 
 ## 💎 What it does ? 
-Basically, this application is divided in four projects. 
+Basically, this application is divided in four projects. Each project generate some code
+* 🚨 Project generator schematics
+This generate an angular application with some base packages.
+ ![alt text](https://github.com/Piciorus-Ovidiu-Mihai/Photos/blob/master/architecture-as-1.png.png)<br/><br/><br/>  ![alt text](https://github.com/Piciorus-Ovidiu-Mihai/Photos/blob/master/architecture-as-2.png.png)<br/><br/><br/>
+* 🚨 Project generator schematics
+ ![alt text](https://github.com/Piciorus-Ovidiu-Mihai/Photos/blob/master/diagrama-arhitectura-new-new.png)<br/><br/><br/>
+* 🚨 Project generator schematics
+ ![alt text](https://github.com/Piciorus-Ovidiu-Mihai/Photos/blob/master/diagrama-arhitectura-new-new.png)<br/><br/><br/>
+* 🚨 Project generator schematics
+ ![alt text](https://github.com/Piciorus-Ovidiu-Mihai/Photos/blob/master/diagrama-arhitectura-new-new.png)<br/><br/><br/>
 
 ## 🛠️ Prerequisites
 * ⚙️ Install [Node.js](https://nodejs.org/en/download/)
