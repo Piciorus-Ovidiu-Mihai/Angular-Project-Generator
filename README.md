@@ -41,7 +41,7 @@ After running all four projects, an entire template of one client application wi
 * ⭐ Open PowerShell with Admin's Rights and write `Set-ExecutionPolicy RemoteSigned`
 * ⭐ For any project you want to run for generating the code use `schematics .:{name} --debug=false`
 * ⭐ After that you have to install angular material using `ng add @angular/material`
-* 
+
 ## 🖥️ What I used ?
 * 💽 `Angular`
 * 💽 `Angular Schematics`
